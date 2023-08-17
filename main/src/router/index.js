@@ -18,14 +18,14 @@ const routes = [
   },
   {
     // 👇 非严格匹配，/my-page/* 都指向 MyPage 页面
-    path: '/main/:page*', // vue-router@4.x path的写法为：'/my-page/:page*'
+    path: '/my-page/:page*', // vue-router@4.x path的写法为：'/my-page/:page*'
     name: 'MyPage',
     component: MyPage,
   },
 ]
 
 const router = createRouter({
-    history: createWebHistory('/'),
+    history: createWebHistory('/main'),
     routes
 })
 

@@ -15,28 +15,30 @@
 <script setup>
 import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router'
+const isDev = (import.meta.env.MODE === 'development')
 const route = useRoute()
+const origin = location.origin
 
 const list = ref([
   {
     appName: 'vue2',
-    url: 'http://localhost:8001/',
-    baseroute: '/main/vue2'
+    url: isDev ? 'http://localhost:8001/child/vue2' : `${origin}/child/vue2`,
+    baseroute: '/my-page/vue2'
   },
   {
     appName: 'vue3',
-    url: 'http://localhost:8002/',
-    baseroute: '/main/vue3'
+    url: isDev ? 'http://localhost:8002/child/vue3' : `${origin}/child/vue3`,
+    baseroute: '/my-page/vue3'
   },
   {
     appName: 'vue2hash',
-    url: 'http://localhost:8003/',
-    baseroute: '/main/vue2hash'
+    url: isDev ? 'http://localhost:8003/child/vue2hash' : `${origin}/child/vue2hash`,
+    baseroute: '/my-page/vue2hash'
   },
   {
     appName: 'vue3hash',
-    url: 'http://localhost:8004/',
-    baseroute: '/main/vue3hash'
+    url: isDev ? 'http://localhost:8004/child/vue3hash' : `${origin}/child/vue3hash`,
+    baseroute: '/my-page/vue3hash'
   }
 ])
 

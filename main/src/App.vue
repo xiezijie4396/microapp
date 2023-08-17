@@ -4,10 +4,10 @@
     这里是主体哦
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/main/vue2">vue2</router-link> |
-      <router-link to="/main/vue3">vue3</router-link> |
-      <router-link to="/main/vue2hash">vue2hash</router-link> |
-      <router-link to="/main/vue3hash">vue3hash</router-link>
+      <router-link to="/my-page/vue2">vue2</router-link> |
+      <router-link to="/my-page/vue3">vue3</router-link> |
+      <router-link to="/my-page/vue2hash">vue2hash</router-link> |
+      <router-link to="/my-page/vue3hash">vue3hash</router-link>
       <!-- <router-link to="/vue3/">vue3</router-link> |
       <router-link to="/react/">react</router-link> |
       <router-link to="/default/">default</router-link> |
